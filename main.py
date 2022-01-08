@@ -12,7 +12,7 @@ bot = commands.Bot(command_prefix="!", case_insensitive=True)
 bot.add_cog(SpellsCog(bot))
 bot.add_cog(CoinCog(bot))
 
-# Adiciona 
+# Adiciona evento
 @bot.event
 async def on_ready():
 	print(f'Logged on as {bot.user}!')
