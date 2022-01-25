@@ -50,19 +50,18 @@
         ]
     },
     {
-        "nome": "Clava",
+        "nome": "Clava Grande",
         "tipo": [
             "simples",
             "corpo-a-corpo"
         ],
-        "preço": "Grande",
+        "preço": "2 pp",
         "dano": [
-            "2 pp",
-            "1d8"
+            "1d8",
+            "concussão"
         ],
-        "peso": "concussão",
+        "peso": "5 kg",
         "propriedades": [
-            "5 kg",
             "pesada,",
             "duas mãos"
         ]
@@ -438,15 +437,16 @@
         "nome": "Malho",
         "tipo": [
             "marcial",
-            "corpo-a-corpo 10"
+            "corpo-a-corpo"
         ],
-        "preço": "po 2d6",
+        "preço": "10 po",
         "dano": [
-            "concussão",
-            "5 kg"
+            "2d6",
+            "concussão"
         ],
-        "peso": "Pesada",
+        "peso": "5 kg",
         "propriedades": [
+            "pesada",
             "duas mãos"
         ]
     },

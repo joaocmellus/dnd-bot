@@ -1,5 +1,5 @@
 {
-    "Bardo": {
+    "bardo": {
         "0": [
             {
                 "nome": "Amizade",
@@ -676,7 +676,7 @@
             }
         ]
     },
-    "Bruxo": {
+    "bruxo": {
         "0": [
             {
                 "nome": "Amizade",
@@ -1248,7 +1248,7 @@
             }
         ]
     },
-    "Clérigo": {
+    "clérigo": {
         "0": [
             {
                 "nome": "Chama Sagrada",
@@ -1835,7 +1835,7 @@
             }
         ]
     },
-    "Druida": {
+    "druida": {
         "0": [
             {
                 "nome": "Bordão Místico",
@@ -2607,7 +2607,7 @@
             }
         ]
     },
-    "Feiticeiro": {
+    "feiticeiro": {
         "0": [
             {
                 "nome": "Amizade",
@@ -3549,7 +3549,7 @@
             }
         ]
     },
-    "Mago": {
+    "mago": {
         "0": [
             {
                 "nome": "Amizade",
@@ -5031,7 +5031,7 @@
             }
         ]
     },
-    "Paladino": {
+    "paladino": {
         "1": [
             {
                 "nome": "Auxílio Divino",
@@ -5283,7 +5283,7 @@
             }
         ]
     },
-    "Patrulheiro": {
+    "patrulheiro": {
         "1": [
             {
                 "nome": "Absorver Elementos",
