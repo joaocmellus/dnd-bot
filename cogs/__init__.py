@@ -3,6 +3,14 @@ from json import load
 
 pyDir = path.dirname(__file__)
 
+class Search:
+	def __init__(self, file_name):
+		self.data = {i['nome'].lower() : i for i in read(file_name)}
+
+	async def get_data(self, name):
+		name = name.lower()
+		return self.data.get(name, None)
+
 def read(file_name):
 	filePath = '..//data//' + file_name
 	file = path.join(pyDir, filePath)

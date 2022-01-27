@@ -1,30 +1,11 @@
-from . import read, read_tables
+from . import Search, read_tables
 from discord import Colour, Embed, File
 from discord.ext import commands
 
-class Spells:
-	def __init__(self):
-		self.spells = tuple(read('spells.json'))
-		self.spellNames = tuple([s['nome'].lower() for s in self.spells])
-		self.classes = read('spells-class.json')
-
-	async def get_spell(self, spell_name):
-		spell_name = spell_name.lower()
-		
-		if spell_name in self.spellNames:
-			s = self.spellNames.index(spell_name)
-			return self.spells[s]
-
-	async def get_class(self, class_name):
-		class_name = class_name.lower()
-
-		if class_name in self.classes:
-			return self.classes[class_name]
-
-class SpellsCog(commands.Cog):
+class Spells(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
-		self.spells = Spells()
+		self.spells = Search('spells.json')
 
 		# Dicionário com as imagens que serão usadas nos embeds
 		self.tables = {file[0][:-4].replace('_', ' ') : File(file[1], filename= file[0]) for file in read_tables()}
@@ -47,7 +28,7 @@ class SpellsCog(commands.Cog):
 			# Mensagem de erro
 			await ctx.send('Comando incorreto...')
 			return
-		spell = await self.spells.get_spell(spell_name.lower())
+		spell = await self.spells.get_data(spell_name)
 
 		if not spell:
 			# Mensagem de erro
