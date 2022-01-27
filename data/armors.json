@@ -1,7 +1,7 @@
 [
     {
         "nome": "Acolchoada",
-        "tipo": ["armadura", "leve"],
+        "tipo": "leve",
         "preço": "5 po",
         "CA": "11 + modificador de Des",
         "força": null,
@@ -10,7 +10,7 @@
     },
     {
         "nome": "Couro",
-        "tipo": ["armadura", "leve"],
+        "tipo": "leve",
         "preço": "10 po",
         "CA": "11 + modificador de Des",
         "força": null,
@@ -19,7 +19,7 @@
     },
     {
         "nome": "Couro Batido",
-        "tipo": ["armadura", "leve"],
+        "tipo": "leve",
         "preço": "45 po",
         "CA": "12 + modificador de Des",
         "força": null,
@@ -28,7 +28,7 @@
     },
     {
         "nome": "Gibão de Peles",
-        "tipo": ["armadura", "média"],
+        "tipo": "média",
         "preço": "10 po",
         "CA": "12 + modificador de Des (máx. +2)",
         "força": null,
@@ -37,7 +37,7 @@
     },
     {
         "nome": "Camisão de Malha",
-        "tipo": ["armadura", "média"],
+        "tipo": "média",
         "preço": "30 po",
         "CA": "13 + modificador de Des (máx. +2)",
         "força": null,
@@ -46,7 +46,7 @@
     },
     {
         "nome": "Brunea",
-        "tipo": ["armadura", "média"],
+        "tipo": "média",
         "preço": "50 po",
         "CA": "14 + modificador de Des (máx. +2)",
         "força": null,
@@ -55,7 +55,7 @@
     },
     {
         "nome": "Peitoral",
-        "tipo": ["armadura", "média"],
+        "tipo": "média",
         "preço": "400 po",
         "CA": "14 + modificador de Des (máx. +2)",
         "força": null,
@@ -64,7 +64,7 @@
     },
     {
         "nome": "Meia-Armadura",
-        "tipo": ["armadura", "média"],
+        "tipo": "média",
         "preço": "750 po",
         "CA": "15 + modificador de Des (máx. +2)",
         "força": null,
@@ -73,7 +73,7 @@
     },
     {
         "nome": "Cota de anéis",
-        "tipo": ["armadura", "pesada"],
+        "tipo": "pesada",
         "preço": "30 po",
         "CA": "15",
         "força": null,
@@ -82,7 +82,7 @@
     },
     {
         "nome": "Cota de malha",
-        "tipo": ["armadura", "pesada"],
+        "tipo": "pesada",
         "preço": "75 po",
         "CA": "16",
         "força": "For 13",
@@ -91,7 +91,7 @@
     },
     {
         "nome": "Cota de talas",
-        "tipo": ["armadura", "pesada"],
+        "tipo": "pesada",
         "preço": "200 po",
         "CA": "17",
         "força": "For 15",
@@ -100,7 +100,7 @@
     },
     {
         "nome": "Placas",
-        "tipo": ["armadura", "pesada"],
+        "tipo": "pesada",
         "preço": "1500 po",
         "CA": "18",
         "força": "For 15",
@@ -109,7 +109,7 @@
     },
     {
         "nome": "Escudo",
-        "tipo": ["escudo", null],
+        "tipo": "escudo",
         "preço": "10 po",
         "CA": "+2",
         "força": null,

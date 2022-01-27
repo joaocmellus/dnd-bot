@@ -67,10 +67,10 @@
         ]
     },
     {
-        "nome": "Foice",
+        "nome": "Foice Curta",
         "tipo": [
             "simples",
-            "corpo-a-corpo curta"
+            "corpo-a-corpo"
         ],
         "preço": "1 po",
         "dano": [

@@ -1,6 +1,6 @@
 from discord.ext import commands
 
-class CoinCog(commands.Cog):
+class Coin(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
 		self.coins = ('pc', 'pp', 'pe', 'po', 'pl')
@@ -36,22 +36,22 @@ class CoinCog(commands.Cog):
 		return result
 
 	@commands.command(name = 'converter')
-	async def converter(self, ctx, coin, to_coin):
+	async def convert_coin(self, ctx, value, to_coin):
 		to_coin = to_coin.lower()
 		if to_coin not in self.coins:
 			await ctx.send('Moeda inválida')
 			return
 
-		coin = await self.coin_splitter(coin)
-		if not coin:
+		value = await self.coin_splitter(value)
+		if not value:
 			await ctx.send('Valor inválido!')
 			return
 
-		result = await self.convert(coin, to_coin)
+		result = await self.convert(value, to_coin)
 		if len(result) == 1:
-			await ctx.send(f'> {coin[0]}{coin[1]} = {result[0]}{to_coin}')
+			await ctx.send(f'> {value[0]}{value[1]} = {result[0]}{to_coin}')
 		else:
-			await ctx.send(f'> {coin[0]}{coin[1]} = {result[0]}{to_coin} e {result[1]}{coin[1]}')
+			await ctx.send(f'> {value[0]}{value[1]} = {result[0]}{to_coin} e {result[1]}{value[1]}')
 
 	@commands.command(name = 'pagar')
 	async def pay(self, ctx, price = None, value = None):
@@ -66,19 +66,19 @@ class CoinCog(commands.Cog):
 			return
 
 		converted = await self.convert(value, price[1])
-		leftower = converted[0] - price[0]
+		leftover = converted[0] - price[0]
 
-		if leftower < 0:
-			message = f'dinheiro insuficiente. Faltam {leftower}{price[1]}'
+		if leftover < 0:
+			message = f'dinheiro insuficiente. Faltam {leftover}{price[1]}'
 
-		elif leftower == 0:
+		elif leftover == 0:
 			if len(converted) == 2:
 				message = f'seu troco é de: {converted[1]}{value[1]}'
 			else:
 				message = f'dinheiro correto! Não sobrou troco'
 			
 		else:
-			reConvert = await self.convert((leftower, price[1]), value[1])
+			reConvert = await self.convert((leftover, price[1]), value[1])
 			if len(reConvert) == 1:
 				if len(converted) == 1:
 					message = f'seu troco é de: {reConvert[0]}{value[1]}'
