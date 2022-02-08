@@ -1,11 +1,11 @@
-from . import Search, read_tables
+from .search import Search, read_tables
 from discord import Colour, Embed, File
 from discord.ext import commands
 
 class Spells(commands.Cog):
 	def __init__(self, bot):
 		self.bot = bot
-		self.spells = Search('spells.json')
+		self._spells = Search('spells.json')
 
 		# Dicionário com as imagens que serão usadas nos embeds
 		self.tables = {file[0][:-4].replace('_', ' ') : File(file[1], filename= file[0]) for file in read_tables()}
@@ -28,7 +28,7 @@ class Spells(commands.Cog):
 			# Mensagem de erro
 			await ctx.send('Comando incorreto...')
 			return
-		spell = await self.spells.get_data(spell_name)
+		spell = await self._spells.get_data(spell_name)
 
 		if not spell:
 			# Mensagem de erro
@@ -81,9 +81,6 @@ class Spells(commands.Cog):
 				await ctx.send(embed=embed, file = file)
 				continue
 			await ctx.send(embed=embed)
-			# if i == 0 and spell['tabela']:				# Segunda opção: enviar a imagem após o embed
-			# 	file = self.tables[spell['nome'].lower()]
-			# 	await ctx.send(file = file)
 
 	async def format_spell(self, text:str) -> list:
 		"""Formata a descrição da magia para o discord"""
@@ -107,9 +104,6 @@ class Spells(commands.Cog):
 			text = [text]
 
 		return text
-
-	async def format_class(self, text) -> list:
-		pass
 
 	async def text_splitter(self, text) -> list:
 		"""Reparte o texto para ser enviado em diferentes embeds, para suprir o limite máximo de caracteres"""
@@ -141,3 +135,17 @@ class Spells(commands.Cog):
 				result.append(text)
 
 		return result
+
+	@commands.command(name = 'magias')
+	async def spells(self, ctx):
+		pass
+		# spells = await self._spells.get_all('nome', 'escola', 'ritual')
+		# description = ''
+		# for i in spells:
+		# 	ritual = '(ritual)\n' if i[2] else '\n'
+		# 	description += f'{i[0]} ({i[1]})' + ritual
+
+		# descriptions = await self.text_splitter(description)
+
+		# async for i in descriptions:
+		# 	await ctx.send(embed=Embed(tittle='Magias', description=description))

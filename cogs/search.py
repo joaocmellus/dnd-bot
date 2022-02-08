@@ -11,6 +11,9 @@ class Search:
 		name = name.lower()
 		return self.data.get(name, None)
 
+	async def get_all(self, *args):
+		return [tuple(v[k] for k in args) for v in self.data.values()]
+
 def read(file_name):
 	filePath = '..//data//' + file_name
 	file = path.join(pyDir, filePath)

@@ -1,12 +1,12 @@
 from discord.ext import commands
-from decouple import config
+import os
 
 # Importar cogs
-from cogs.Spells import Spells
-from cogs.Coin import Coin
-from cogs.Infos import Infos
-from cogs.Armors import Armors
-from cogs.Weapons import Weapons
+from cogs.spells import Spells
+from cogs.coin import Coin
+from cogs.infos import Infos
+from cogs.armors import Armors
+from cogs.weapons import Weapons
 
 bot = commands.Bot(command_prefix="!", case_insensitive=True)
 
@@ -24,5 +24,5 @@ async def on_ready():
 
 # Iniciar o bot
 if __name__ == '__main__':
-	TOKEN = config('TOKEN')
+	TOKEN = os.getenv('TOKEN')
 	bot.run(TOKEN)
