@@ -6,12 +6,12 @@ class Coin(commands.Cog):
 		self.coins = ('pc', 'pp', 'pe', 'po', 'pl')
 		self.convertion = (
 		# Ordem da seleção: coluna-linha
-		#	pc		 pp		 pe		 po		 pl
-			(1,		0.1,	0.02,	0.01,	0.001),	# pc
-			(10,	1,		0.2,	0.1,	0.01 ),	# pp 
-			(50,	5,		1,		0.5,	0.05 ),	# pe
-			(100,	10,		2,		1,		0.1	 ),	# po
-			(1000,	100,	20,		10,		1	 )	# pl
+		#	pc	 pp	 pe	po	 pl
+			(1,	0.1,	0.02,	0.01,	0.001),	# pc
+			(10,	1,	0.2,	0.1,	0.01),	# pp 
+			(50,	5,	1,	0.5,	0.05),	# pe
+			(100,	10,	2,	1,	0.1),	# po
+			(1000,	100,	20,	10,	1)	# pl
 		)
 
 	async def coin_splitter(self, coin) -> tuple:
