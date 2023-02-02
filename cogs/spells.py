@@ -3,149 +3,148 @@ from discord import Colour, Embed, File
 from discord.ext import commands
 
 class Spells(commands.Cog):
-	def __init__(self, bot):
-		self.bot = bot
-		self._spells = Search('spells.json')
+    def __init__(self, bot):
+        self.bot = bot
+        self._spells = Search('spells.json')
+        self.tables = [File(file, filename= f'tabela {iteration+1}.png') for iteration, file in enumerate(read_tables())]
+        self.colours = {
+            'abjuração': Colour.blurple(),
+            'adivinhação' : Colour.gold(),
+            'conjuração' : Colour.blue(),
+            'encantamento' : Colour.purple(),
+            'evocação' : Colour.red(),
+            'ilusão' : Colour.light_gray(),
+            'necromancia' : Colour.darker_gray(),
+            'transmutação' : Colour.green()
+        }
 
-		# Dicionário com as imagens que serão usadas nos embeds
-		self.tables = {file[0][:-4].replace('_', ' ') : File(file[1], filename= file[0]) for file in read_tables()}
+    @commands.command(name = 'magia')
+    async def spell(self, ctx, *, spell_name= None):
+        if not spell_name:
+            await ctx.send('Comando incompleto.')
+            return
+        spell = await self._spells.get_data(spell_name.lower())
+        if not spell:
+            # Mensagem de erro
+            await ctx.send('A magia não foi encontrada.')
+            return
 
-		# Cores para cada escola de magia
-		self.colours = {
-			'abjuração': Colour.blurple(),
-			'adivinhação' : Colour.gold(),
-			'conjuração' : Colour.blue(),
-			'encantamento' : Colour.purple(),
-			'evocação' : Colour.red(),
-			'ilusão' : Colour.light_gray(),
-			'necromancia' : Colour.darker_gray(),
-			'transmutação' : Colour.green()
-		}
+        # Enviar Embeds
+        embeds = await self.format_spell(spell)
+        for iteration, embed in enumerate(embeds):
+            # Verifica se a mensagem precisa de imagem
+            if iteration == 0 and spell['tabela']:
+                file = self.tables[spell['tabela']-1]
+                embed.set_image(url="attachment://" + file.filename)
+                await ctx.send(embed=embed, file=file)
+                continue
+            await ctx.send(embed=embed)
 
-	@commands.command(name = 'magia')
-	async def spell(self, ctx, *, spell_name = None):
-		if not spell_name:
-			# Mensagem de erro
-			await ctx.send('Comando incorreto...')
-			return
-		spell = await self._spells.get_data(spell_name)
+    async def format_spell(self, spell:dict) -> list:
+        """
+        Formata os textos da magia e retorna como embed.
+        
+        :param spell: dicionário com os dados da magia;
+        :return embeds_list:
+        """
+        ritual = ' **(Ritual)**' if spell['ritual'] else ''
+        description = spell['descrição'].replace('Em Níveis Superiores.', '**Em Níveis Superiores.**')
 
-		if not spell:
-			# Mensagem de erro
-			await ctx.send('A magia não existe...')
-			return
+        # Adiciona negrito (**) nas frases que tem \t 
+        if '\t' in description:
+            description = list(spell['descrição'])
+            x = False
+            for iteration, letter in enumerate(description):
+                if j == '\t':
+                    description[iteration] = '\t**'
+                    x = True
+                elif j == '.' and x == True:
+                    description[iteration] = '.**'
+                    x = False
+            description = ''.join(description)
 
-		await self.send_spell(ctx, spell)
+        # Verificar se o texto cabe em um só embed
+        if len(description) > 1024:
+            description = await text_splitter(description)
+        else:
+            description = [description]
 
-	async def send_spell(self, ctx, spell):
-		"""Formata os dados da magia e envia no chat"""
-		ritual = ' **(Ritual)**' if spell['ritual'] else ''
-		description_list = await self.format_spell(spell['descrição'])
+        # Criação dos embeds
+        embeds = []
+        for iteration, text in enumerate(description):
+            if iteration == 0:
+                embed = Embed(
+                    title= spell['nome'], 
+                    colour= self.colours[spell['escola']],   
+                    description= str(spell['nível']) + 'º nível de ' + 
+                        spell['escola'] + ritual if spell['nível'] != 0
+                        else 'Truque de ' + spell['escola'],
+                )
+                
+                fields = [
+                    ('Conjuradores', ', '.join(spell['classes'])),
+                    ('Tempo de Conjuração', spell['tempo de conjuração']),
+                    ('Alcance', spell['alcance']),
+                    ('Componentes', spell['componentes']),
+                    ('Duração', spell['duração']),
+                    ('Descrição', text)
+                ]
 
-		# Loop para criar embeds
-		embeds = []
+                for i in fields:
+                    embed.add_field(name=i[0], value=i[1], inline=False)
+            else:
+                embed = Embed(
+                    title= spell['nome'] + ' - Continuação', 
+                    colour= self.colours[spell['escola']],   
+                    description= text,
+                )
+            embed.set_footer(text='Fonte: ' + spell['fonte'])
+            embeds.append(embed)
+        return embeds
 
-		# Cria o Embed
-		for i, description in enumerate(description_list):
-			if i == 0:
-				embeds.append({
-					'title': spell['nome'],
-					'description': str(spell['nível']) + 'º nível de ' + spell['escola'] + ritual if spell['nível'] != 0 else 'Truque de ' + spell['escola'], 
-					'type': 'rich',
-					'fields': [
-						{'inline': False, 'name': 'Conjuradores', 'value': ', '.join(spell['classes'])}, 
-						{'inline': False, 'name': 'Tempo de Conjuração', 'value': spell['tempo de conjuração']}, 
-						{'inline': False, 'name': 'Alcance', 'value': spell['alcance']}, 
-						{'inline': False, 'name': 'Componentes', 'value': spell['componentes']}, 
-						{'inline': False, 'name': 'Duração', 'value': spell['duração']}, 
-						{'inline': False, 'name': 'Descrição', 'value': description},
-					],
-					'footer': {'text': 'Fonte: ' + spell['fonte']},
-				})
-			else:
-				embeds.append({
-					'title': spell['nome'] + ' - Continuação' ,
-					'description': description, 
-					'type': 'rich',
-					'fields': [],
-					'footer': {'text': 'Fonte: ' + spell['fonte']},
-				})
-		
-		for i, embed in enumerate(embeds):
-			embed = Embed.from_dict(embed)
-			embed.colour = self.colours[spell['escola']]
-			# Verifica e adiciona imagem da tabela ao embed
-			if i == 0 and spell['tabela']:					# Primeira opção: enviar a imagem acoplada ao embed
-				file = self.tables[spell['nome'].lower()]
-				embed.set_image(url="attachment://" + file.filename)
-				await ctx.send(embed=embed, file = file)
-				continue
-			await ctx.send(embed=embed)
+    @commands.command(name = 'magias')
+    async def spells(self, ctx):
+        pass
+        # spells = await self._spells.get_all('nome', 'escola', 'ritual')
+        # description = ''
+        # for i in spells:
+        #   ritual = '(ritual)\n' if i[2] else '\n'
+        #   description += f'{i[0]} ({i[1]})' + ritual
 
-	async def format_spell(self, text:str) -> list:
-		"""Formata a descrição da magia para o discord"""
-		text = text.replace('Em Níveis Superiores.', '**Em Níveis Superiores.**')
-		if '\t' in text:
-			text = list(text)
-			x = False
-			for i, j in enumerate(text):
-				if j == '\t':
-					text[i] = '\t**'
-					x = True
-				elif j == '.' and x == True:
-					text[i] = '.**'
-					x = False
-			text = ''.join(text)
+        # descriptions = await self.text_splitter(description)
 
-		# Verificar se o texto cabe no embed
-		if len(text) > 1024:
-			text = await self.text_splitter(text)
-		else:
-			text = [text]
+        # async for i in descriptions:
+        #   await ctx.send(embed=Embed(tittle='Magias', description=description))
 
-		return text
+async def text_splitter(text:str) -> list:
+    """
+    Fragmenta o texto em partes menores dentro do limite máximo
+    de caracteres
+    
+    :param text: str
+    :return list:
+    """
+    splitted = text.split('\n')
+    result = []
+    for i, part in enumerate(splitted):
+        #  Verificar se é o primeiro
+        if i == 0:
+            # Inicia primeiro bloco de texto
+            text = part
+            continue
+        # Definir o limite de caracteres
+        if len(result) == 0:
+            length = 1024   # valor do field
+        else:
+            length = 4096   # valor da descrição
+        # Verificar se já atingiu o limite de caracteres
+        if len(text)+1 + len(part) > length:
+            result.append(text)
+            text = part
+        else:
+            text += '\n' + part
 
-	async def text_splitter(self, text) -> list:
-		"""Reparte o texto para ser enviado em diferentes embeds, para suprir o limite máximo de caracteres"""
-		splitted = text.split('\n')
-		result = []
-
-		for i, part in enumerate(splitted):
-			#  Verificar se é o primeiro
-			if i == 0:
-				# Definir variável text
-				text = part
-				continue
-
-			# Definir variável length
-			if len(result) == 0:
-				length = 1024	# valor do field
-			else:
-				length = 4096	# valor da descrição
-
-			# Verificar o tamanho
-			if len(text)+1 + len(part) > length:
-				result.append(text)
-				text = part
-			else:
-				text += '\n' + part
-			
-			# Verificar se é o último
-			if i+1 == len(splitted):
-				result.append(text)
-
-		return result
-
-	@commands.command(name = 'magias')
-	async def spells(self, ctx):
-		pass
-		# spells = await self._spells.get_all('nome', 'escola', 'ritual')
-		# description = ''
-		# for i in spells:
-		# 	ritual = '(ritual)\n' if i[2] else '\n'
-		# 	description += f'{i[0]} ({i[1]})' + ritual
-
-		# descriptions = await self.text_splitter(description)
-
-		# async for i in descriptions:
-		# 	await ctx.send(embed=Embed(tittle='Magias', description=description))
+        # Verificar se é o último
+        if i+1 == len(splitted):
+            result.append(text)
+    return result
