@@ -37,7 +37,7 @@ def read(file_name:str) -> list:
     """
     Le arquivo json e retorna o conteúdo.
     """
-    file = path.join(PY_DIR, 'data', file_name)
+    file = path.join(PY_DIR, '..', 'data', file_name)
     with open(file, 'r', encoding='utf-8') as doc:
         return load(doc)
 
@@ -46,7 +46,7 @@ def read_tables() -> list:
     """
     Retorna o path de todas as imagens de tabelas.
     """
-    dir_path = path.join(PY_DIR, 'data', 'tables')
+    dir_path = path.join(PY_DIR, '..', 'data', 'tables')
     tables = []
     for file in listdir(dir_path): 
         tables.append((path.join(dir_path, file)))

@@ -1,0 +1,619 @@
+[
+    {
+        "nome": "Adaga",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "2 po",
+        "dano": [
+            "1d4",
+            "perfurante"
+        ],
+        "peso": "0,5 kg",
+        "propriedades": [
+            "acuidade",
+            "leve",
+            "arremesso (distância 6/18)"
+        ]
+    },
+    {
+        "nome": "Azagaia",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "5 pp",
+        "dano": [
+            "1d6",
+            "perfurante"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "arremesso (distância 9/36)"
+        ]
+    },
+    {
+        "nome": "Bordão",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "2 pp",
+        "dano": [
+            "1d6",
+            "concussão"
+        ],
+        "peso": "2 kg",
+        "propriedades": [
+            "versátil (1d8)"
+        ]
+    },
+    {
+        "nome": "Clava Grande",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "2 pp",
+        "dano": [
+            "1d8",
+            "concussão"
+        ],
+        "peso": "5 kg",
+        "propriedades": [
+            "pesada,",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Foice Curta",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "1 po",
+        "dano": [
+            "1d4",
+            "cortante"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "leve"
+        ]
+    },
+    {
+        "nome": "Lança",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "1 po",
+        "dano": [
+            "1d6",
+            "perfurante"
+        ],
+        "peso": "1,5 kg",
+        "propriedades": [
+            "arremesso (distância 6/18)",
+            "versátil (1d8)"
+        ]
+    },
+    {
+        "nome": "Maça",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "5 po",
+        "dano": [
+            "1d6",
+            "concussão"
+        ],
+        "peso": "2 kg",
+        "propriedades": []
+    },
+    {
+        "nome": "Machadinha",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "5 po",
+        "dano": [
+            "1d6",
+            "cortante"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "leve",
+            "arremesso (distância 6/18)"
+        ]
+    },
+    {
+        "nome": "Martelo Leve",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "2 po",
+        "dano": [
+            "1d4",
+            "concussão"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "leve",
+            "arremesso (distância 6/18)"
+        ]
+    },
+    {
+        "nome": "Porrete",
+        "tipo": [
+            "simples",
+            "corpo-a-corpo"
+        ],
+        "preço": "1 pp",
+        "dano": [
+            "1d4",
+            "concussão"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "leve"
+        ]
+    },
+    {
+        "nome": "Arco Curto",
+        "tipo": [
+            "simples",
+            "distância"
+        ],
+        "preço": "25 po",
+        "dano": [
+            "1d6",
+            "perfurante"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "munição (distância 24/96)",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Beste Leve",
+        "tipo": [
+            "simples",
+            "distância"
+        ],
+        "preço": "25 po",
+        "dano": [
+            "1d8",
+            "perfurante"
+        ],
+        "peso": "2,5 kg",
+        "propriedades": [
+            "munição (distância 24/96)",
+            "recarga",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Dardo",
+        "tipo": [
+            "simples",
+            "distância"
+        ],
+        "preço": "5 pc",
+        "dano": [
+            "1d4",
+            "perfurante"
+        ],
+        "peso": "0,1 kg",
+        "propriedades": [
+            "acuidade",
+            "arremesso (distância 6/18)"
+        ]
+    },
+    {
+        "nome": "Funda",
+        "tipo": [
+            "simples",
+            "distância"
+        ],
+        "preço": "1 pp",
+        "dano": [
+            "1d4",
+            "concussão"
+        ],
+        "peso": null,
+        "propriedades": [
+            "munição (distância 9/36)"
+        ]
+    },
+    {
+        "nome": "Alabarda",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "20 po",
+        "dano": [
+            "1d10",
+            "cortante"
+        ],
+        "peso": "3 kg",
+        "propriedades": [
+            "pesada",
+            "alcance",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Cimitarra",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "25 po",
+        "dano": [
+            "1d6",
+            "cortante"
+        ],
+        "peso": "1,5 kg",
+        "propriedades": [
+            "acuidade",
+            "leve"
+        ]
+    },
+    {
+        "nome": "Chicote",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "2 po",
+        "dano": [
+            "1d4",
+            "cortante"
+        ],
+        "peso": "1,5 kg",
+        "propriedades": [
+            "acuidade",
+            "alcance"
+        ]
+    },
+    {
+        "nome": "Espada Curta",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "10 po",
+        "dano": [
+            "1d6",
+            "perfurante"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "acuidade",
+            "leve"
+        ]
+    },
+    {
+        "nome": "Espada Grande",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "50 po",
+        "dano": [
+            "2d6",
+            "cortante"
+        ],
+        "peso": "3 kg",
+        "propriedades": [
+            "pesada",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Espada Longa",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "15 po",
+        "dano": [
+            "1d8",
+            "cortante"
+        ],
+        "peso": "1,5 kg",
+        "propriedades": [
+            "versátil (1d10)"
+        ]
+    },
+    {
+        "nome": "Glaive",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "20 po",
+        "dano": [
+            "1d10",
+            "cortante"
+        ],
+        "peso": "3 kg",
+        "propriedades": [
+            "pesada",
+            "alcance",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Lança de Montaria",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "10 po",
+        "dano": [
+            "1d12",
+            "perfurante"
+        ],
+        "peso": "3 kg",
+        "propriedades": [
+            "alcance",
+            "especial"
+        ]
+    },
+    {
+        "nome": "Lança Longa",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "5 po",
+        "dano": [
+            "1d10",
+            "perfurante"
+        ],
+        "peso": "4 kg",
+        "propriedades": [
+            "pesada",
+            "alcance",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Maça Estrela",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "15 po",
+        "dano": [
+            "1d8",
+            "perfurante"
+        ],
+        "peso": "2 kg",
+        "propriedades": []
+    },
+    {
+        "nome": "Machado Grande",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "30 po",
+        "dano": [
+            "1d12",
+            "cortante"
+        ],
+        "peso": "3,5 kg",
+        "propriedades": [
+            "pesada",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Machado de Batalha",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "10 po",
+        "dano": [
+            "1d8",
+            "cortante"
+        ],
+        "peso": "2 kg",
+        "propriedades": [
+            "versátil (1d10)"
+        ]
+    },
+    {
+        "nome": "Malho",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "10 po",
+        "dano": [
+            "2d6",
+            "concussão"
+        ],
+        "peso": "5 kg",
+        "propriedades": [
+            "pesada",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Mangual",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "10 po",
+        "dano": [
+            "1d8",
+            "concussão"
+        ],
+        "peso": "1 kg",
+        "propriedades": []
+    },
+    {
+        "nome": "Martelo de Guerra",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "15 po",
+        "dano": [
+            "1d8",
+            "concussão"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "versátil (1d10)"
+        ]
+    },
+    {
+        "nome": "Picareta de Guerra",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "5 po",
+        "dano": [
+            "1d8",
+            "perfurante"
+        ],
+        "peso": "1 kg",
+        "propriedades": []
+    },
+    {
+        "nome": "Rapieira",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "25 po",
+        "dano": [
+            "1d8",
+            "perfurante"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "acuidade"
+        ]
+    },
+    {
+        "nome": "Tridente",
+        "tipo": [
+            "marcial",
+            "corpo-a-corpo"
+        ],
+        "preço": "5 po",
+        "dano": [
+            "1d6",
+            "perfurante"
+        ],
+        "peso": "2 kg",
+        "propriedades": [
+            "arremesso (6/18)",
+            "versátil (1d8)"
+        ]
+    },
+    {
+        "nome": "Arco Longo",
+        "tipo": [
+            "marcial",
+            "distância"
+        ],
+        "preço": "50 po",
+        "dano": [
+            "1d8",
+            "perfurante"
+        ],
+        "peso": "1 kg",
+        "propriedades": [
+            "munição (distância 45/180)",
+            "pesada",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Besta de Mão",
+        "tipo": [
+            "marcial",
+            "distância"
+        ],
+        "preço": "75 po",
+        "dano": [
+            "1d6",
+            "perfurante"
+        ],
+        "peso": "1,5 kg",
+        "propriedades": [
+            "munição (distância 9/36)",
+            "leve",
+            "recarga"
+        ]
+    },
+    {
+        "nome": "Besta Pesada",
+        "tipo": [
+            "marcial",
+            "distância"
+        ],
+        "preço": "50 po",
+        "dano": [
+            "1d10",
+            "perfurante"
+        ],
+        "peso": "4,5 kg",
+        "propriedades": [
+            "munição (distância 30/120)",
+            "pesada",
+            "recarga",
+            "duas mãos"
+        ]
+    },
+    {
+        "nome": "Rede",
+        "tipo": [
+            "marcial",
+            "distância"
+        ],
+        "preço": "1 po",
+        "dano": [
+            null,
+            null
+        ],
+        "peso": "1,5 kg",
+        "propriedades": [
+            "especial",
+            "arremesso (distância 1,5/4,5)"
+        ]
+    },
+    {
+        "nome": "Zarabatana",
+        "tipo": [
+            "marcial",
+            "distância"
+        ],
+        "preço": "10 po",
+        "dano": [
+            "1",
+            "perfurante"
+        ],
+        "peso": "0,5 kg",
+        "propriedades": [
+            "munição (distância 7,5/30)",
+            "recarga"
+        ]
+    }
+]
