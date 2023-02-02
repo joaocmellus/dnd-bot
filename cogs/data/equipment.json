@@ -1,0 +1,497 @@
+[
+    {
+        "nome": "Ábaco",
+        "preço": "2 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Ácido (vidro)",
+        "preço": "25 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Água benta (frasco)",
+        "preço": "25 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Algemas",
+        "preço": "2 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Algibeira",
+        "preço": "5 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Aljava",
+        "preço": "1 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Ampulheta",
+        "preço": "25 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Antídoto (vidro)",
+        "preço": "50 po",
+        "peso": null
+    },
+    {
+        "nome": "Apito de advertência",
+        "preço": "25 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Aríete portátil",
+        "preço": "4 po",
+        "peso": "17,5 kg"
+    },
+    {
+        "nome": "Armadilha de caça",
+        "preço": "5 po",
+        "peso": "12,5 kg"
+    },
+    {
+        "nome": "Arpéu",
+        "preço": "2 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Balança de mercador",
+        "preço": "5 po",
+        "peso": "1,5 kg"
+    },
+    {
+        "nome": "Balde",
+        "preço": "5 pc",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Barril",
+        "preço": "2 po",
+        "peso": "35 kg"
+    },
+    {
+        "nome": "Baú",
+        "preço": "5 po",
+        "peso": "12,5 kg"
+    },
+    {
+        "nome": "Bolsa de componentes",
+        "preço": "25 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Caixa de Fogo",
+        "preço": "5 pp",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Caneca",
+        "preço": "2 pc",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Caneta tinteiro",
+        "preço": "2 pc",
+        "peso": null
+    },
+    {
+        "nome": "Cantil",
+        "preço": "2 pp",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Cesto",
+        "preço": "4pp",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Cobertor de inverno",
+        "preço": "5 pp",
+        "peso": "1,5 kg"
+    },
+    {
+        "nome": "Corda de cânhamo (15 metros)",
+        "preço": "1 po",
+        "peso": "5 kg"
+    },
+    {
+        "nome": "Corda de seda (15 metros)",
+        "preço": "10 po",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Corrente (3 metros)",
+        "preço": "5 po",
+        "peso": "5 kg"
+    },
+    {
+        "nome": "Equipamento de pescaria",
+        "preço": "1 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Escada (3 metros)",
+        "preço": "1 pp",
+        "peso": "12,5 kg"
+    },
+    {
+        "nome": "Esferas (sacola com 1.000)",
+        "preço": "1 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Espelho de aço",
+        "preço": "5 po",
+        "peso": "0,25 kg"
+    },
+    {
+        "nome": "Estrepes (bolsa com 20)",
+        "preço": "1 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Fechadura",
+        "preço": "10 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Bastão",
+        "preço": "10 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Cajado",
+        "preço": "5 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Cristal",
+        "preço": "10 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Orbe",
+        "preço": "20 po",
+        "peso": "1,5 kg"
+    },
+    {
+        "nome": "Varinha",
+        "preço": "10 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Cajado de madeira",
+        "preço": "5 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Ramo de visco",
+        "preço": "1 po",
+        "peso": null
+    },
+    {
+        "nome": "Totem",
+        "preço": "1 po",
+        "peso": null
+    },
+    {
+        "nome": "Varinha de teixo",
+        "preço": "10 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Fogo alquímico (frasco)",
+        "preço": "50 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Frasco",
+        "preço": "2 pc",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Garrafa de vidro",
+        "preço": "1 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Giz (1 peça)",
+        "preço": "1 pc",
+        "peso": null
+    },
+    {
+        "nome": "Grimório",
+        "preço": "50 po",
+        "peso": "1,5 kg"
+    },
+    {
+        "nome": "Jarra",
+        "preço": "4 pc",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Kit de escalada",
+        "preço": "25 po",
+        "peso": "6 kg"
+    },
+    {
+        "nome": "Kit de primeiros-socorros",
+        "preço": "5 po",
+        "peso": "1,5 kg"
+    },
+    {
+        "nome": "Lâmpada",
+        "preço": "5 pp",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Lanterna coberta",
+        "preço": "5 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Lanterna furta-fogo",
+        "preço": "10 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Lente de aumento",
+        "preço": "100 po",
+        "peso": null
+    },
+    {
+        "nome": "Livro",
+        "preço": "25 po",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Luneta",
+        "preço": "1000 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Manto",
+        "preço": "1 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Marreta",
+        "preço": "2 po",
+        "peso": "5 kg"
+    },
+    {
+        "nome": "Martelo",
+        "preço": "1 po",
+        "peso": "1,5 kg"
+    },
+    {
+        "nome": "Mochila",
+        "preço": "2 po",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Balas de Funda (20)",
+        "preço": "4 pc",
+        "peso": "0,75 kg"
+    },
+    {
+        "nome": "Flechas (20)",
+        "preço": "1 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Virotes (20)",
+        "preço": "1 po",
+        "peso": "0,75 kg"
+    },
+    {
+        "nome": "Zarabatana (50)",
+        "preço": "1 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Óleo (frasco)",
+        "preço": "1 pp",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Pá",
+        "preço": "2 po",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Panela de ferro",
+        "preço": "2 po",
+        "peso": "5 kg"
+    },
+    {
+        "nome": "Papel (uma folha)",
+        "preço": "2 pp",
+        "peso": null
+    },
+    {
+        "nome": "Parafina",
+        "preço": "5 pp",
+        "peso": null
+    },
+    {
+        "nome": "Pé de cabra",
+        "preço": "2 po",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Pedra de amolar",
+        "preço": "1 pc",
+        "peso": null
+    },
+    {
+        "nome": "Perfume (frasco)",
+        "preço": "5 po",
+        "peso": null
+    },
+    {
+        "nome": "Pergaminho (uma folha)",
+        "preço": "1 pp",
+        "peso": null
+    },
+    {
+        "nome": "Picareta de minerador",
+        "preço": "2 po",
+        "peso": "5 kg"
+    },
+    {
+        "nome": "Píton",
+        "preço": "5 pc",
+        "peso": null
+    },
+    {
+        "nome": "Poção de cura",
+        "preço": "50 po",
+        "peso": "0,25 kg"
+    },
+    {
+        "nome": "Porta mapas ou pergaminhos",
+        "preço": "1 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Porta virotes",
+        "preço": "1 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Pregos de ferro (10)",
+        "preço": "1 po",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Rações de viagem (1 dia)",
+        "preço": "5 pp",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Robes",
+        "preço": "1 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Roldana e polia",
+        "preço": "1 po",
+        "peso": "2,5 kg"
+    },
+    {
+        "nome": "Roupas comuns",
+        "preço": "5 pp",
+        "peso": "1,5 kg"
+    },
+    {
+        "nome": "Roupas de viajante",
+        "preço": "2 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Roupas de entretenimento",
+        "preço": "5 po",
+        "peso": "2 kg"
+    },
+    {
+        "nome": "Roupas finas",
+        "preço": "15 po",
+        "peso": "3 kg"
+    },
+    {
+        "nome": "Sabão",
+        "preço": "2 pc",
+        "peso": null
+    },
+    {
+        "nome": "Saco",
+        "preço": "1 pc",
+        "peso": "0,25 kg"
+    },
+    {
+        "nome": "Saco de dormir",
+        "preço": "1 po",
+        "peso": "3,5 kg"
+    },
+    {
+        "nome": "Amuleto",
+        "preço": "5 po",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Emblema",
+        "preço": "5 po",
+        "peso": null
+    },
+    {
+        "nome": "Relicário",
+        "preço": "5 po",
+        "peso": "1 kg"
+    },
+    {
+        "nome": "Sinete",
+        "preço": "5 po",
+        "peso": null
+    },
+    {
+        "nome": "Sino",
+        "preço": "1 po",
+        "peso": null
+    },
+    {
+        "nome": "Tenda para duas pessoas",
+        "preço": "2 po",
+        "peso": "10 kg"
+    },
+    {
+        "nome": "Tocha",
+        "preço": "1 pc",
+        "peso": "0,5 kg"
+    },
+    {
+        "nome": "Tinta (frasco de 30ml)",
+        "preço": "10 po",
+        "peso": null
+    },
+    {
+        "nome": "Vara (3 metros)",
+        "preço": "5 pc",
+        "peso": "3,5 kg"
+    },
+    {
+        "nome": "Vela",
+        "preço": "1 pc",
+        "peso": null
+    },
+    {
+        "nome": "Veneno básico (frasco)",
+        "preço": "100 po",
+        "peso": null
+    }
+]
