@@ -2,62 +2,45 @@ from .search import Search, read
 from discord import Embed
 from discord.ext import commands
 
-class InfoData(Search):
-	def __init__(self, data, data1):
-		super().__init__(data)
-		self.data1 = {i['nome'].lower() : i for i in read(data1)}
-
-	async def get_data(self, name):
-		name = name.lower()
-		if name in self.data:
-			return self.data.get(name)
-		return self.data1.get(name, None)
-
-	async def get_all(self, data, *args):
-		if data == 'conditions':
-			data = self.data.values()
-		else:
-			data = self.data1.values()
-		return [tuple(v[k] for k in args) for v in data]
-
 class Infos(commands.Cog):
-	def __init__(self, bot):
-		self.bot = bot
-		self._informations = InfoData('conditions.json', 'weapons-properties.json')
+    def __init__(self, bot):
+        self.bot = bot
+        self._conditions = Search('conditions.json')
+        self._wproperties = Search('weapons-properties.json')
 
-	@commands.command(aliases = ['i'])
-	async def info(self, ctx, *, info = None):
-		if not info:
-			# Mensagem de erro
-			await ctx.send('Comando incorreto...')
-			return
-		info = await self._informations.get_data(info)
+    @commands.command(name = 'condição')
+    async def condition(self, ctx, *, condition_name= None):
+        if not condition_name:
+            await ctx.send('Comando incompleto.')
+            return
+        condition = await self._conditions.get_data(condition_name)
+        if not condition:
+            await ctx.send('A condição  não foi encontrada.')
+            return
 
-		if not info:
-			# Mensagem de erro
-			await ctx.send('A condição não existe...')
-			return
+        embed = Embed(title=condition['nome'], description= '• ' + '\n• '.join(condition['efeitos']))
+        await ctx.send(embed=embed)
 
-		if 'efeitos' in info:
-			embed = Embed(title=info['nome'], description= '• ' + '\n• '.join(info['efeitos']))
-		else:
-			embed = Embed(title=info['nome'], description= info['descrição'])
+    @commands.command(name='condições')
+    async def conditions(self, ctx):
+        conditions = await self._conditions.get_all('nome')
+        embed = Embed(title='Condições', description='• ' + '\n• '.join([i[0] for i in conditions]))
+        await ctx.send(embed=embed)
 
-		await ctx.send(embed=embed)
+    @commands.command(aliases = ['propriedade', 'info', 'i'])
+    async def propertie(self, ctx, *, propertie_name= None):
+        if not propertie_name:
+            await ctx.send('Comando incompleto.')
+            return
+        propertie = await self._wproperties.get_data(propertie_name)
+        if not propertie:
+            await ctx.send('A propriedade não foi encontrada.')
+            return
+        embed = Embed(title=propertie['nome'], description= propertie['descrição'])
+        await ctx.send(embed=embed)
 
-	@commands.command(name='condições')
-	async def conditions(self, ctx):
-		conditions = await self._informations.get_all('conditions', 'nome')
-
-		embed = Embed(tittle='Condições', description='• ' + '\n• '.join([i[0] for i in conditions]))
-		
-		await ctx.send(embed=embed)
-
-	@commands.command(name='propriedades')
-	async def properties(self, ctx):
-		properties = await self._informations.get_all('properties', 'nome')
-
-		embed = Embed(tittle='Propriedades', description='• ' + '\n• '.join([i[0] for i in properties]))
-		
-		await ctx.send(embed=embed)
-
+    @commands.command(name='propriedades')
+    async def properties(self, ctx):
+        properties = await self._wproperties.get_all('nome')
+        embed = Embed(title='Propriedades das Armas', description='• ' + '\n• '.join([i[0] for i in properties]))
+        await ctx.send(embed=embed)

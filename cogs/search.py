@@ -1,29 +1,53 @@
 from os import path, listdir
 from json import load
 
-pyDir = path.dirname(__file__)
+PY_DIR = path.dirname(__file__)
 
 class Search:
-	def __init__(self, file_name):
-		self.data = {i['nome'].lower() : i for i in read(file_name)}
+    """
+    Classe para fazer pesquisas na base de dados.
+    """
+    def __init__(self, file_name:str):
+        """
+        :param file_name: nome arquivo que contém os dados a serem lidos.
+        """
+        file_data = read(file_name)
+        self.data = {}
+        for i in file_data:
+            self.data[i['nome'].lower()] = i
 
-	async def get_data(self, name):
-		name = name.lower()
-		return self.data.get(name, None)
+    async def get_data(self, name:str) -> dict:
+        """
+        Retorna o conteúdo de um único dado pesquisado pelo nome.
 
-	async def get_all(self, *args):
-		return [tuple(v[k] for k in args) for v in self.data.values()]
+        :param name: str
+        """
+        return self.data.get(name, None)
 
-def read(file_name):
-	filePath = '..//data//' + file_name
-	file = path.join(pyDir, filePath)
-	with open(file, 'r', encoding='utf-8') as doc:
-		return load(doc)
+    async def get_all(self, *keys:str) -> list:
+        """
+        Retorna uma lista de todo o contéudo somente com
+        os dados das keys passadas como parâmetro.
+        
+        :param keys: keys que serão pesquisadas
+        """
+        return [tuple(v[k] for k in keys) for v in self.data.values()]
 
+def read(file_name:str) -> list:
+    """
+    Le arquivo json e retorna o conteúdo.
+    """
+    file = path.join(PY_DIR, '..', 'data', file_name)
+    with open(file, 'r', encoding='utf-8') as doc:
+        return load(doc)
+
+# mudar depois -> ver como essa função interage com o embed
 def read_tables() -> list:
-	dirPath = '..//data//tables//'
-	files = []
-	for file in listdir(path.join(pyDir, dirPath)): 
-		filePath = path.join(pyDir, dirPath + file)
-		files.append((file, filePath))
-	return files
+    """
+    Retorna o path de todas as imagens de tabelas.
+    """
+    dir_path = path.join(PY_DIR, '..', 'data', 'tables')
+    tables = []
+    for file in listdir(dir_path): 
+        tables.append((path.join(dir_path, file)))
+    return tables

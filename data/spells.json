@@ -311,7 +311,7 @@
         "componentes": "V, S",
         "duração": "Concentração, até 1 minuto",
         "descrição": "Objetos ganham vida ao seu comando. Escolha até dez objetos não-mágicos dentro do alcance, que não estejam sendo vestidos ou carregados. Alvos Médios contam como dois objetos, alvos Grandes contam como quatro objetos e alvos Enormes contam como oito objetos. Você não pode animar um objeto maior que Enorme. Cada alvo se anima e torna-se uma criatura sob seu controle até o final da magia ou até ser reduzido a 0 pontos de vida.\nCom uma ação bônus, você pode comandar mentalmente qualquer criatura que você criar com essa magia se a criatura estiver a até 150 metros de você (se você controla várias criaturas, você pode comandar qualquer ou todas elas ao mesmo tempo, emitindo o mesmo comando para cada uma). Você decide qual ação a criatura irá fazer e para onde ela irá se mover durante o próximo turno dela, ou você pode emitir um comando geral, como para guardar uma câmara ou corredor especifico. Se você não der nenhum comando, as criaturas apenas se defenderão contra criaturas hostis. Uma vez que receba uma ordem, a criatura continuará a segui-la até a tarefa estar concluída.\nUm objeto animado é um constructo com CA, pontos de vida, ataques, Força e Destreza determinados pelo seu tamanho. Sua Constituição é 10 e sua Inteligência e Sabedoria são 3 e seu Carisma é 1. Seu deslocamento é 9 metros; se o objeto não tiver pernas ou outros apêndices que ele possa usar para locomoção, ao invés, ele terá deslocamento de voo 9 metros e poderá planar. Se o objeto estiver firmemente preso a uma superfície ou objeto maior, como uma corrente presa a uma parede, seu deslocamento será 0. Ele tem percepção às cegas num raio de 9 metros e é cego além dessa distância. Quando o objeto animado cair a 0 pontos de vida, ele reverte a sua forma normal de objeto e qualquer dano restante é transferido para sua forma de objeto original.\nSe você ordenar a um objeto que ataque, ele pode realizar um único ataque corpo-a-corpo contra uma criatura a até 1,5 metro dele. Ele realiza um ataque de pancada com um bônus de ataque e dano de concussão determinado pelo seu tamanho. O Mestre pode definir que um objeto especifico inflige dano cortante ou perfurante, baseado na forma dele.\nEm Níveis Superiores. Se você conjurar essa magia usando um espaço de magia de 6º nível ou superior, você pode animar dois objetos adicionais para cada nível do espaço acima do 5º.",
-        "tabela": true,
+        "tabela": 1,
         "fonte": "Livro do Jogador"
     },
     {
@@ -1461,7 +1461,7 @@
         "componentes": "V, S, M (três cascas de noz)",
         "duração": "Concentração, até 1 minuto",
         "descrição": "Essa magia ataca e embaralha as mentes das criaturas, gerando delírios e provocando ações descontroladas. Cada criatura em uma esfera com 3 metros de raio, centrada num ponto, à sua escolha, dentro do alcance, deve ser bem sucedida num teste de resistência de Sabedoria, quando você conjurar essa magia ou for afetada por ela.\nUm alvo afetado não pode realizar reações e deve rolar um d10 no início de cada um dos seus turnos para determinar seu comportamento nesse turno.\nAo final de cada um dos seus turnos, um alvo afetado pode realizar um teste de resistência de Sabedoria. Se for bem sucedido, esse efeito acaba nesse alvo.\nEm Níveis Superiores. Se você conjurar essa magia usando um espaço de magia de 5º nível ou superior, o raio da esfera aumenta em 1,5 metro para cada nível do espaço acima do 4º.",
-        "tabela": true,
+        "tabela": 2,
         "fonte": "Livro do Jogador"
     },
     {
@@ -1769,7 +1769,7 @@
         "componentes": "V, S, M (incenso aceso e pedaços de terra e madeira misturados em água)",
         "duração": "Concentração, até 8 horas",
         "descrição": "Você toma controle do clima numa área de 7,5 quilômetros de você pela duração. Você deve estar ao ar livre para conjurar essa magia. Se mover para um lugar onde você não tenha uma visão clara do céu termina a magia prematuramente.\nQuando você conjurar essa magia, você muda as condições climáticas atuais, que são determinadas pelo Mestre baseado no ambiente e estação. Você pode mudar a precipitação, temperatura e vento. Leva 1d4 x 10 minutos para as novas condições fazerem efeito. Quando a magia terminar, o clima, gradualmente, volta ao normal.\nQuando você altera as condições climáticas, encontre a condição atual nas tabelas a seguir e mude em um estágio, para cima ou para baixo. Quando mudar o vento, você pode mudar a direção do mesmo.",
-        "tabela": true,
+        "tabela": 3,
         "fonte": "Livro do Jogador"
     },
     {
@@ -1939,7 +1939,7 @@
         "componentes": "V, S, M (um pequeno pedaço de material do mesmo tipo do item que você planeja criar)",
         "duração": "Especial",
         "descrição": "Você puxa mechas de matéria sombria da Umbra para criar objetos inanimados de matéria vegetal dentro do alcance: bens finos, cordas, madeira ou algo similar. Você também pode usar a magia para criar objetos minerais como pedra, cristal ou metal. O objeto criado não pode ser maior que um cubo de 1,5 metro e o objeto deve ser de um formado e material que você já tenha visto antes.\nA duração depende do material do objeto. Se o objeto for composto por diversos materiais, use o de menor duração.\nUsar qualquer material criado por essa magia como componente material de outra magia faz com que a magia falhe.\nEm Níveis Superiores. Quando você conjurar essa magia usando um espaço de magia de 6º nível ou superior, o tamanho do cubo aumenta em 1,5 metro para cada nível do espaço de magia acima do 5º.",
-        "tabela": true,
+        "tabela": 4,
         "fonte": "Livro do Jogador"
     },
     {
@@ -4116,7 +4116,7 @@
         "componentes": "V, S, M (um frasco de sangue de um humanoide morto nas últimas 24 horas)",
         "duração": "Concentração, até 1 hora",
         "descrição": "Você pronuncia palavras abomináveis, convocando demônios do caos do abismo. Role na tabela a seguir para determinar o que aparece.\nO mestre escolhe os demônios, como manes ou dretches, e você escolhe os espaços desocupados que você pode ver dentro do alcance onde eles aparecem. Um demônio convocado desaparece quando ele cai para O pontos de vida ou quando a magia termina.\nOs demônios são hostis a todas as criaturas, incluindo você. Role iniciativa para os demônios invocados como um grupo, que tem seus próprios turnos. Os demônios perseguem e atacam os não-demônios mais próximos da melhor forma possível.\nComo parte da conjuração da magia, você pode formar um círculo no chão com o sangue usado como componente material. O círculo é grande o suficiente para abranger o seu espaço. Enquanto a magia dura, os demônios convocados não podem atravessar o círculo ou prejudicá-lo, e eles não podem atingir ninguém dentro dele. O uso do componente material dessa forma o consome quando a magia termina.\nEm Níveis Superiores. Quando você conjura esta magia usando um espaço de magia do 6º ou 7º nível, você convoca duas vezes mais demônios. Se você lançá-lo usando um espaço de magia do 8º ou 9º nível, você invoca três vezes mais demônios. ",
-        "tabela": true,
+        "tabela": 5,
         "fonte": "Xanathar's Guide"
     },
     {
@@ -6312,7 +6312,7 @@
         "componentes": "V, S",
         "duração": "Instantãnea",
         "descrição": "Você conjura uma massa ondulante de energia caótica em uma criatura no alcance. Faça um ataque a distância com magia contra o alvo. Se atingir, o alvo leva 2d8 + 1d6 de dano. Escolha um dos d8s. O número rolado nesse dado determina o tipo de dano do ataque, como mostrado abaixo.\nSe você rolar o mesmo número em ambos os d8s, a energia caótica salta do alvo para uma criatura diferente a sua escolha dentro de 9 metros de distãncia. Faça uma nova rolagem de ataque contra o novo alvo, e faça uma nova rolagem de danos, o que pode fazer com que a energia caótica salte novamente.\nEm Níveis Superiores. Quando você conjura essa magia usando um espaço de magia de 2º nível ou superior, o dano aumenta em 1d6 para cada nível do espaço acima do 1º.",
-        "tabela": true,
+        "tabela": 6,
         "fonte": "Xanathar's Guide"
     },
     {
@@ -6531,7 +6531,7 @@
         "componentes": "V, S, M (óleos e unguentos raros valendo, no mínimo, 1.000 po, consumidos pela magia)",
         "duração": "Instantânea",
         "descrição": "Você toca um humanoide morto ou um pedaço de um humanoide morto. Considerando que a criatura não esteja morta a mais de 10 dias, a magia forma um novo corpo adulto para ele e então, chama a alma para entrar no corpo. Se a alam do alvo não estiver livre ou deseje fazêlo, a magia falha.\nA magia forma um novo corpo para que a criatura habite, o que, provavelmente, fará com que a raça da criatura mude. O Mestre rola um d100 e consulta a tabela seguinte para determinar qual forma a criatura terá quando voltar a vida, ou o Mestre pode escolher uma forma.\nA criatura reencarnada lembra-se da sua vida e experiências anteriores. Ela mantem as capacidades que a sua forma original tinha, exceto por trocar sua raça original pela nova e mudar suas características raciais adequadamente.",
-        "tabela": true,
+        "tabela": 7,
         "fonte": "Livro do Jogador"
     },
     {
@@ -7296,7 +7296,7 @@
         "componentes": "V",
         "duração": "Instantânea",
         "descrição": "Essa magia, instantaneamente, transporta você e até oito criaturas voluntárias, à sua escolha, que você possa ver dentro do alcance ou um único objeto que você possa ver no alcance, para um destino que você selecionou. Se você for afetar um objeto, ele deve ser capaz de caber inteiro dentro de um cubo de 3 metros e não pode estar sendo empunhado ou carregado por uma criatura involuntária. \nO destino que você escolher deve ser conhecido por você e deve ser no mesmo plano de existência que você está. Sua familiaridade com o destino determina se você chegará nele com sucesso. O Mestre rola um d100 e consulta a tabela.\n\tFamiliaridade. “Círculo permanente” significa um círculo de teletransporte permanente o qual você conhece a sequência de selos. “Objeto associado” significa que você possui um objeto retirado do destino desejado nos últimos seis meses, como um livro da biblioteca do mago, roupa de cama de uma suíte real ou um pedaço de mármore da tumba secreta do lich.\n“Muito familiar” é um lugar que você já tenha ido muitas vezes, um lugar que você estudou cuidadosamente ou um local que você possa ver enquanto conjura a magia.\n“Visto casualmente” é algum lugar que você tenha visto mais de uma vez, mas que não seja muito familiar. “Visto uma vez” é um lugar que você só viu uma vez, possivelmente através de magia. “Descrição” é um lugar cuja localização e aparência você conhece através da descrição de outrem, talvez através de um mapa.\n“Destino falso” é um local que não existe. Talvez você tenha tentado espionar o santuário de um inimigo, mas, ao invés, viu uma ilusão ou você está tentando se teletransportar para um local familiar que não existe mais.\n\tNo Alvo. Você e seu grupo (ou objeto alvo) aparecem onde você queria.\n\tFora do Alvo. Você e seu grupo (ou objeto alvo) aparecem a uma distância aleatória fora do destino em uma direção aleatória. A distância do alvo é 1d10 x 1d10 por cento da distância que você viajou. Por exemplo, se você tentou viajar 180 quilômetros, mas apareceu fora do alvo e rolou um 5 e um 3 nos dois d10s, então você saiu do alvo 15 por cento ou 27 quilômetros. O Mestre determina a direção de fora do alvo aleatoriamente rolando um d8 e designando 1 como norte, 2 como nordeste, 3 como leste e assim por diante ao redor dos pontos cardeais. Se você seria teletransportado para uma cidade costeira, podendo cair a 27 quilômetros dela, no mar, você poderia ter problemas. \n\tÁrea Similar. Você e seu grupo (ou objeto alvo) aparecem em uma área diferente que, visualmente ou tematicamente, é similar a área alvo. Se você estava indo para o laboratório na sua casa, por exemplo, você pode parar em outro laboratório de mago ou em uma loja de suprimentos alquímicos que terá muitas ferramentas iguais às encontradas no seu laboratório. Geralmente, você aparecerá no local similar mais próximo, mas já que a magia não tem limite de alcance, você pode, concebivelmente, viajar para qualquer lugar no plano.\n\tFiasco. A mágica imprevisível da magia resulta em uma jornada difícil. Cada criatura teletransportada (ou o objeto alvo) sofrem 3d10 de dano de energia e o Mestre rola novamente a tabela para ver onde você foi parar (fiascos múltiplos podem ocorrer, causando dano a cada vez).",
-        "tabela": true,
+        "tabela": 8,
         "fonte": "Livro do Jogador"
     },
     {
@@ -7696,7 +7696,7 @@
         "componentes": "V, S, M (um foco valendo, no mínimo, 1.000 po, como uma bola de cristal, espelho de prata ou fonte cheia de água benta)",
         "duração": "Concentração, até 10 minutos",
         "descrição": "Você pode ver e ouvir uma criatura em particular, à sua escolha, que esteja no mesmo plano de existência que você. O alvo deve realizar um teste de resistência de Sabedoria, que é modificador de acordo com o quão bem você conhece o alvo e o tipo de conexão física que você tem com ele. Se um alvo souber que você está conjurando essa magia, ele pode falhar no teste de resistência voluntariamente, se ele quiser ser observado.\nCom um sucesso na resistência, o alvo não é afetado e você não pode usar essa magia contra ele novamente por 24 horas.\nSe falhar na resistência, a magia cria um sensor invisível a até 3 metros do alvo. Você pode ver e ouvir através do sensor, como se você estivesse onde ele está. O sensor se move com o alvo, permanecendo a 3 metros dele pela duração. Uma criatura que puder ver objetos invisíveis verá o sensor como um globo luminoso do tamanho de um punho.\nAo invés de focar em uma criatura, você pode escolher um local que você já tenha visto antes como alvo dessa magia. Quando fizer isso, o sensor aparece no local e não se move.",
-        "tabela": true,
+        "tabela": 9,
         "fonte": "Livro do Jogador"
     },
     {
