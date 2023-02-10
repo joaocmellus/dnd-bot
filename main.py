@@ -8,6 +8,7 @@ from cogs.coin import Coin
 from cogs.infos import Infos
 from cogs.armors import Armors
 from cogs.weapons import Weapons
+from cogs.dice import Dice
 
 # Intents
 intents = discord.Intents.default()
@@ -28,7 +29,8 @@ async def on_connect():
     await bot.add_cog(Coin(bot))
     await bot.add_cog(Infos(bot))
     await bot.add_cog(Armors(bot))
-    await bot.add_cog(Weapons(bot))   
+    await bot.add_cog(Weapons(bot))
+    await bot.add_cog(Dice(bot))
 
 # Iniciar o bot
 if __name__ == '__main__':
