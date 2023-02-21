@@ -3,8 +3,7 @@ from discord import Colour, Embed, File
 from discord.ext import commands
 
 class Spells(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
+    def __init__(self):
         self._spells = Search('spells.json')
         self.tables = [File(file, filename= f'tabela {iteration+1}.png') for iteration, file in enumerate(read_tables())]
         self.colours = {
@@ -44,8 +43,8 @@ class Spells(commands.Cog):
         """
         Formata os textos da magia e retorna como embed.
         
-        :param spell: dicionário com os dados da magia;
-        :return embeds_list:
+        :param spell: <dict> dados da magia;
+        :return embeds_list: <list>
         """
         ritual = ' **(Ritual)**' if spell['ritual'] else ''
         description = spell['descrição'].replace('Em Níveis Superiores.', '**Em Níveis Superiores.**')
@@ -102,21 +101,7 @@ class Spells(commands.Cog):
             embeds.append(embed)
         return embeds
 
-    @commands.command(name = 'magias')
-    async def spells(self, ctx):
-        pass
-        # spells = await self._spells.get_all('nome', 'escola', 'ritual')
-        # description = ''
-        # for i in spells:
-        #   ritual = '(ritual)\n' if i[2] else '\n'
-        #   description += f'{i[0]} ({i[1]})' + ritual
-
-        # descriptions = await self.text_splitter(description)
-
-        # async for i in descriptions:
-        #   await ctx.send(embed=Embed(tittle='Magias', description=description))
-
-async def text_splitter(text:str) -> list:
+async def text_splitter(text:str, for_embed=True) -> list:
     """
     Fragmenta o texto em partes menores dentro do limite máximo
     de caracteres
@@ -133,10 +118,10 @@ async def text_splitter(text:str) -> list:
             text = part
             continue
         # Definir o limite de caracteres
-        if len(result) == 0:
-            length = 1024   # valor do field
-        else:
-            length = 4096   # valor da descrição
+        length = 4096   # valor da descrição
+        if for_embed:
+            if len(result) == 0:
+                length = 1024   # valor do field
         # Verificar se já atingiu o limite de caracteres
         if len(text)+1 + len(part) > length:
             result.append(text)

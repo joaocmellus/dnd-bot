@@ -25,14 +25,14 @@ async def on_ready():
 # Add Cogs
 @bot.event
 async def on_connect():
-    await bot.add_cog(Spells(bot))
-    await bot.add_cog(Coin(bot))
-    await bot.add_cog(Infos(bot))
-    await bot.add_cog(Armors(bot))
-    await bot.add_cog(Weapons(bot))
-    await bot.add_cog(Dice(bot))
+    await bot.add_cog(Spells())
+    await bot.add_cog(Coin())
+    await bot.add_cog(Infos())
+    await bot.add_cog(Armors())
+    await bot.add_cog(Weapons())
+    await bot.add_cog(Dice())
 
-# Iniciar o bot
+# Initiate bot
 if __name__ == '__main__':
     TOKEN = os.getenv('TOKEN')
     bot.run(TOKEN)

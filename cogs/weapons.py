@@ -3,8 +3,7 @@ from discord import Embed, Colour
 from discord.ext import commands
 
 class Weapons(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
+    def __init__(self):
         self._weapons = Search('weapons.json')
 
     @commands.command(name = 'arma')
