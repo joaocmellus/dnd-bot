@@ -2,10 +2,7 @@ from discord.ext import commands
 import random
 
 class Dice(commands.Cog):
-	def __init__(self, bot):
-		self.bot = bot
-
-	@commands.command(aliases=['r','rolar', 'd', 'dado'])
+	@commands.command(name= 'rolar', aliases=['r', 'd', 'dado'])
 	async def roll_dice(self, ctx, dice_expression=None):
 		if not dice_expression:
 			await ctx.send('Comando incompleto.')
@@ -40,12 +37,19 @@ class Dice(commands.Cog):
 async def split_dice(dice_value) -> bool or list:
 	if not 'd' in dice_value:
 		return
-	values = []
-	for i, value in enumerate(dice_value.split('d')):
-		value = value.strip()
-		if not value.isdigit():
+	values = dice_value.split('d')
+	for i, value in enumerate(values):
+		if i > 1:
 			return
-		values.append(int(value))
+		value = value.strip()
+		if not value:
+			if i == 1:
+				value = 6
+			else:
+				value = 1
+		elif not value.isdigit():
+			return
+		values[i] = int(value)
 	return values
 
 async def roll(time, dice_value):

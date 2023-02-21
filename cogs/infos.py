@@ -3,8 +3,7 @@ from discord import Embed
 from discord.ext import commands
 
 class Infos(commands.Cog):
-    def __init__(self, bot):
-        self.bot = bot
+    def __init__(self):
         self._conditions = Search('conditions.json')
         self._wproperties = Search('weapons-properties.json')
 

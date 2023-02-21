@@ -14,9 +14,9 @@ Esse projeto está sendo desenvolvido com o intuito de **aprendizado**, sem prev
   -  condições;
   -  armas e equipamentos;
 - Conversão de valores entre moedas.
+- Rolagem de dados personalizada;
 
 ## ⚙️Em desenvolvimento
-- Rolagem de dados personalizada;
 - Criação e consulta de persongens;
 - Envio de fichas de personagem em pdf editável;
 
