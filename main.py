@@ -1,6 +1,7 @@
+import os
 import discord
 from discord.ext import commands
-import os
+from data_handler import DataRepository, read_tables
 
 # Importing Cogs
 from cogs.spells import Spells
@@ -16,6 +17,8 @@ intents.message_content = True
 
 # Instantiating bot
 bot = commands.Bot(command_prefix='!', case_insensitive=True, intents=intents)
+db = DataRepository()
+db.add_dir(os.path.join(os.path.dirname(__file__), 'data'), 'nome')
 
 # Events
 @bot.event
@@ -25,11 +28,11 @@ async def on_ready():
 # Add Cogs
 @bot.event
 async def on_connect():
-    await bot.add_cog(Spells())
+    await bot.add_cog(Spells(db, read_tables()))
     await bot.add_cog(Coin())
-    await bot.add_cog(Infos())
-    await bot.add_cog(Armors())
-    await bot.add_cog(Weapons())
+    await bot.add_cog(Infos(db))
+    await bot.add_cog(Armors(db))
+    await bot.add_cog(Weapons(db))
     await bot.add_cog(Dice())
 
 # Initiate bot

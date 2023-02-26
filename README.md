@@ -7,16 +7,15 @@ Um bot para o discord com o intuito de agilizar os processos de consulta à ***r
 Esse projeto está sendo desenvolvido com o intuito de **aprendizado**, sem previsão para hospedagem e lançamento. 😅
 
 **em desenvolvimento.*
-
 ## 🛠️Funcionalidades
 - Consulta rápida de informações:
   -  magias;
   -  condições;
   -  armas e equipamentos;
 - Conversão de valores entre moedas.
-- Rolagem de dados personalizada;
 
 ## ⚙️Em desenvolvimento
+- Rolagem de dados personalizada;
 - Criação e consulta de persongens;
 - Envio de fichas de personagem em pdf editável;
 

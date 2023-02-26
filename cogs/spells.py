@@ -1,11 +1,10 @@
-from .search import Search, read_tables
 from discord import Colour, Embed, File
 from discord.ext import commands
 
 class Spells(commands.Cog):
-    def __init__(self):
-        self._spells = Search('spells.json')
-        self.tables = [File(file, filename= f'tabela {iteration+1}.png') for iteration, file in enumerate(read_tables())]
+    def __init__(self, data, tables):
+        self._spells = data.spells
+        self.tables = [File(file, filename= f'tabela {iteration+1}.png') for iteration, file in enumerate(tables)]
         self.colours = {
             'abjuração': Colour.blurple(),
             'adivinhação' : Colour.gold(),
@@ -22,7 +21,7 @@ class Spells(commands.Cog):
         if not spell_name:
             await ctx.send('Comando incompleto.')
             return
-        spell = await self._spells.get_data(spell_name.lower())
+        spell = await self._spells.get(spell_name.lower())
         if not spell:
             # Mensagem de erro
             await ctx.send('A magia não foi encontrada.')
@@ -106,8 +105,8 @@ async def text_splitter(text:str, for_embed=True) -> list:
     Fragmenta o texto em partes menores dentro do limite máximo
     de caracteres
     
-    :param text: str
-    :return list:
+    :param text: <str>
+    :return: <list>
     """
     splitted = text.split('\n')
     result = []

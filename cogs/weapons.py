@@ -1,17 +1,16 @@
-from .search import Search
 from discord import Embed, Colour
 from discord.ext import commands
 
 class Weapons(commands.Cog):
-    def __init__(self):
-        self._weapons = Search('weapons.json')
+    def __init__(self, data):
+        self._weapons = data.weapons
 
     @commands.command(name = 'arma')
     async def weapon(self, ctx, *, weapon_name= None):
         if not weapon_name:
             await ctx.send('Comando incompleto.')
             return
-        weapon = await self._weapons.get_data(weapon_name)
+        weapon = await self._weapons.get(weapon_name)
         if not weapon:
             await ctx.send('A arma não foi encontrada.')
             return
@@ -35,7 +34,7 @@ class Weapons(commands.Cog):
             
     @commands.command(name = 'armas')
     async def weapons(self, ctx, weapon_type=None):
-        weapons = await self._weapons.get_all('nome', 'tipo')
+        weapons = await self._weapons.all('nome', 'tipo')
         if weapon_type == 'simples':
             title = 'Armas Simples',
             fields = [
