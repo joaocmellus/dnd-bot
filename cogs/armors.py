@@ -1,17 +1,16 @@
-from .search import Search
 from discord import Embed, Colour
 from discord.ext import commands
 
 class Armors(commands.Cog):
-    def __init__(self):
-        self.armors = Search('armors.json')
+    def __init__(self, data):
+        self._armors = data.armors
 
     @commands.command(name = 'armadura')
     async def armor(self, ctx, *, armor_name = None):
         if not armor_name:
             await ctx.send('Comando incompleto.')
             return
-        armor = await self.armors.get_data(armor_name)
+        armor = await self._armors.get(armor_name)
         if not armor:
             await ctx.send('A armadura não foi encontrada.')
             return
@@ -34,7 +33,7 @@ class Armors(commands.Cog):
 
     @commands.command(name = 'armaduras')
     async def armors(self, ctx):
-        armors = await self.armors.get_all('nome', 'tipo')
+        armors = await self._armors.all('nome', 'tipo')
         embed = Embed(
             title= 'Armaduras', 
             colour= Colour.darker_grey(),
